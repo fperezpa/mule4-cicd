@@ -4,7 +4,7 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<flow name="pollerFlow" doc:id="837824fe-5eac-4543-acd0-f20bfe1abb48" >
+	<flow name="poller-flow" doc:id="837824fe-5eac-4543-acd0-f20bfe1abb48" >
 		<scheduler doc:name="Scheduler" doc:id="d15e74cd-e3ba-416b-9211-f2b01bd53682" >
 			<scheduling-strategy >
 				<fixed-frequency />
