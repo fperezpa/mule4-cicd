@@ -46,7 +46,6 @@
 				</configuration>
 			</plugin>
 
-			<!-- TO SKIP MAVEN DEPLOYMENT - MAVEN REPO -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
