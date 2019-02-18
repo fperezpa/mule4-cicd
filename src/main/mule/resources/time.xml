@@ -4,22 +4,17 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<flow name="poller-flow" doc:id="837824fe-5eac-4543-acd0-f20bfe1abb48" >
-		<scheduler doc:name="Scheduler" doc:id="d15e74cd-e3ba-416b-9211-f2b01bd53682" >
-			<scheduling-strategy >
-				<fixed-frequency />
-			</scheduling-strategy>
-		</scheduler>
-		<ee:transform doc:name="Transform Message" doc:id="634f6c0f-9bee-4993-baef-e05a61ac84ed" >
+	<flow name="timeFlow" doc:id="d793a1bb-75e4-4804-9ac1-8ca65f2854c6" >
+		<ee:transform doc:name="Transform Message" doc:id="44790fa5-a049-4933-bf84-64a95a80b255" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
-	now : now
+	time: now() as String
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="260a3019-fbde-4e88-a0ab-6b50a25398e7" message="#[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="51a7088f-1970-42f6-a87f-c7503da6679d" message="Time : #[payload]"/>
 	</flow>
 </mule>

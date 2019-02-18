@@ -9,11 +9,9 @@ http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/sc
 	<flow name="simple-app-main">
         <http:listener config-ref="simple-app-httpListenerConfig" path="/api/*">
             <http:response statusCode="#[vars.httpStatus default 200]">
-                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
             </http:response>
             <http:error-response statusCode="#[vars.httpStatus default 500]">
-                <http:body>#[payload]</http:body>
-                <http:headers>#[vars.outboundHeaders default {}]</http:headers>
+                <http:body><![CDATA[#[payload]]]></http:body>
             </http:error-response>
         </http:listener>
         <apikit:router config-ref="simple-app-config" />
@@ -127,16 +125,6 @@ output application/json
     </flow>
     <flow name="get:\time:simple-app-config">
         <logger level="INFO" message="get:\time:simple-app-config" />
-		<ee:transform doc:name="Transform Message" doc:id="de15b7d8-68d9-4beb-99a4-c9abea99bf02" >
-			<ee:message >
-				<ee:set-payload ><![CDATA[%dw 2.0
-output application/json
----
-{
-	time: now as String
-}]]></ee:set-payload>
-			</ee:message>
-		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="4bf84ca7-24f1-433c-94fb-1b575cb03c35" message="Time : #[payload]"/>
+		<flow-ref doc:name="Flow Reference" doc:id="0c48cd3c-cfe6-40e8-bcd2-658f06eb1f5b" name="timeFlow"/>
     </flow>
 </mule>
