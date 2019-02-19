@@ -5,7 +5,20 @@ title: simple-app
 /time:
   description: Gets Time
   get:
+    queryParameters:
+      utc:
+        type: boolean
+        required: true
     responses: 
       200:
         body: 
           application/json:
+      405:
+        description: Method Not Allowed
+        body:
+          application/json:
+      404:
+        description: Not Found
+        body:
+          application/json:
+            
