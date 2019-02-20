@@ -28,6 +28,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<cloudHubDeployment>
+					    <artifact>target/${project.build.finalName}-${project.packaging}.jar</artifact>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
 						<username>${username}</username>
