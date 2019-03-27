@@ -1,0 +1,10 @@
+https:
+  port: "8443"
+  private:
+    port: "9443"
+  alias: localhost
+  keyPassword: keyPassword
+  keyStorePassword: keyStorePassword
+    
+api:
+  id : "15642236"
