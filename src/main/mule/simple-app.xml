@@ -139,6 +139,7 @@ output application/json
 		</error-handler>
 	</flow>
 	<flow name="get:\time:simple-app-config">
+		<logger level="INFO" message="get:\time:simple-app-config" />
 		<flow-ref doc:name="time-flow" doc:id="942967a0-1a56-4d41-be19-61219887dd6b"
 			name="time-flow" />
 	</flow>
