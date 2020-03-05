@@ -20,8 +20,8 @@
 		<maven.release.plugin.version>2.5.3</maven.release.plugin.version>
 	</properties>
 	<scm>
-		<connection>scm:git:ssh://git@github.com:fperezpa/mule4-cicd.git</connection>
-		<developerConnection>scm:git:ssh://git@github.com:fperezpa/mule4-cicd.git</developerConnection>
+		<connection>scm:git:ssh://git@github.com/fperezpa/mule4-cicd.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com/fperezpa/mule4-cicd.git</developerConnection>
 		<url>https://github.com/fperezpa/mule4-cicd</url>
 	  <tag>cicd-app-1.0.0</tag>
   </scm>
