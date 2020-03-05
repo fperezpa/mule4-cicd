@@ -4,7 +4,7 @@
 
 	<groupId>com.fpp</groupId>
 	<artifactId>cicd-app</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
 	<name>cicd-app</name>
