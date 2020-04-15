@@ -4,7 +4,7 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<flow name="time-flow" doc:id="68595152-287e-41b6-bd11-9ed5a6636cac" >
+	<flow name="time-flowFlowWrong" doc:id="68595152-287e-41b6-bd11-9ed5a6636cac" >
 		<ee:transform doc:name="Transform Message" doc:id="51ee4a82-a311-4e6e-b77c-075d91e13495" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
@@ -15,6 +15,6 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="f9b6e8a8-a14f-4ce9-b7d9-a3b2d58588bb" message="Time : #[payload]"/>
+		<logger level="INFO" doc:name="Logger - 2" doc:id="f9b6e8a8-a14f-4ce9-b7d9-a3b2d58588bb" message="Time : #[payload]"/>
 	</flow>
 </mule>
